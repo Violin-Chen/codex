@@ -17,16 +17,11 @@ module axi_slave_model
     logic [7:0]            rd_rem;
     logic                  rd_active;
 
-    // default assignments
+    // default constant outputs
     initial begin
         axi.AWREADY = 1'b1;
         axi.WREADY  = 1'b1;
-        axi.BVALID  = 1'b0;
         axi.ARREADY = 1'b1;
-        axi.RVALID  = 1'b0;
-        axi.RLAST   = 1'b0;
-        wr_active   = 1'b0;
-        rd_active   = 1'b0;
     end
 
     // write logic
