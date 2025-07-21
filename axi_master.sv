@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 // Simple AXI master interface and tasks
 interface axi_master_if #(parameter ADDR_WIDTH = 32, DATA_WIDTH = 32)();
 
@@ -148,5 +149,5 @@ interface axi_master_if #(parameter ADDR_WIDTH = 32, DATA_WIDTH = 32)();
         end
     endtask : read_mem
 
-endinterface : axi_master_if
+endinterface
 

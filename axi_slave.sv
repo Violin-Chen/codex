@@ -1,8 +1,10 @@
-module axi_slave_model #(
-    parameter ADDR_WIDTH = 32,
+`timescale 1ns/1ps
+
+module axi_slave_model
+  #(parameter ADDR_WIDTH = 32,
     parameter DATA_WIDTH = 32,
-    parameter MEM_DEPTH  = 256
-) (axi_master_if axi);
+    parameter MEM_DEPTH  = 256)
+  (axi_master_if axi);
 
     logic [DATA_WIDTH-1:0] mem [0:MEM_DEPTH-1];
 
