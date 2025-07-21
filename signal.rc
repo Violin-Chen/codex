@@ -1,4 +1,16 @@
-# Verdi signal display script
-# Load the waveform database and display top-level signals
-fsdbDumpfile waves.fsdb
-fsdbDumpvars 0 tb_axi
+# signal.rc - Verdi waveform setup
+# Open the FSDB database and add a few key signals
+
+# Open the database
+database open waves.fsdb
+
+# Create a waveform window and add signals
+probe -create sim:/tb_axi/ACLK
+probe -create sim:/tb_axi/ARESETn
+probe -create sim:/tb_axi/axi/AWADDR
+probe -create sim:/tb_axi/axi/WDATA
+probe -create sim:/tb_axi/axi/ARADDR
+probe -create sim:/tb_axi/axi/RDATA
+
+# Zoom to fit after signals are added
+wave zoom full
