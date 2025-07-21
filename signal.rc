@@ -1,0 +1,4 @@
+# Verdi signal display script
+# Load the waveform database and display top-level signals
+fsdbDumpfile waves.fsdb
+fsdbDumpvars 0 tb_axi

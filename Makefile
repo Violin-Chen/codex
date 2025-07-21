@@ -5,6 +5,7 @@ TOP = tb_axi
 SIMV = simv
 VERDI = verdi
 VERDI_OPTS = -sv -f $(FILES) -ssf waves.fsdb -top $(TOP)
+VERDI_SCRIPT = signal.rc
 
 all: $(SIMV)
 
@@ -18,4 +19,4 @@ clean:
 	rm -rf $(SIMV) csrc simv.daidir *.vpd *.log
 
 verdi:
-	$(VERDI) $(VERDI_OPTS)
+	$(VERDI) $(VERDI_OPTS) -play $(VERDI_SCRIPT)
