@@ -4,7 +4,7 @@ FILES = filelist.f
 TOP = tb_axi
 SIMV = simv
 VERDI = verdi
-VERDI_OPTS = -f $(FILES) -ssf waves.fsdb -top $(TOP)
+VERDI_OPTS = -sv -f $(FILES) -ssf waves.fsdb -top $(TOP)
 
 all: $(SIMV)
 
