@@ -17,6 +17,12 @@ module tb_axi;
     assign axi.ACLK = ACLK;
     assign axi.ARESETn = ARESETn;
 
+    // FSDB dump
+    initial begin
+        $fsdbDumpfile("waves.fsdb");
+        $fsdbDumpvars(0, tb_axi);
+    end
+
     // instantiate slave model
     axi_slave_model #(.ADDR_WIDTH(ADDR_WIDTH), .DATA_WIDTH(DATA_WIDTH)) slave(axi);
 
