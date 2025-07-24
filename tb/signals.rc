@@ -1,0 +1,2 @@
+add wave -r tb_axi4.*
+run
